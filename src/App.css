@@ -1,0 +1,96 @@
+/**Reset**/
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  padding-left: 0;
+  list-style: none;
+}
+h1,h2,h3,hr{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.header{
+  display: flex;
+ justify-content: space-around;
+}
+
+.header button{
+  display: block;
+  padding: 8px 12px ;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: darkblue;
+  color: white;
+  height: 35px;
+}
+/**Card**/
+.card__container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:20px;
+}
+.card{
+  width: 250px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #aaa9;
+  transition: transform 200ms ease;
+}
+.card:hover{
+  transform: scale(1.05);
+  transition: transform 200ms ease;
+}
+.card__item{
+  display: flex;
+  gap:2px;
+  margin-bottom: 7px;
+  color:#aaac;
+  padding-left:10px ;
+}
+.card__spam{
+  color: black;
+  transform: translateX(-10px);
+}
+.card__footer{
+  display: flex;
+  gap:12px;
+  border-radius: 5px;
+  justify-content: flex-end;
+}
+
+.card__btn{
+  border:none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card__btn i{
+  font-size: 16px;
+}
+.card__btn:nth-child(1){
+  background-color: rgb(180, 19, 19);
+  color: white;
+}
+
+.form__list{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.form__item input{
+  border-radius: 5px;
+  height: 30px;
+  padding: 10px;
+}
