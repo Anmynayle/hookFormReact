@@ -1,10 +1,18 @@
 /**Reset**/
+:root{
+  --bg-color:white;
+  --text: black;
+}
 *{
   box-sizing: border-box;
 }
 body{
   margin: 0;
   padding: 0;
+}
+.App.dark{
+  --bg-color:black;
+  --text: white;
 }
 ul{
   padding-left: 0;
@@ -13,12 +21,18 @@ ul{
 h1,h2,h3,hr{
   margin-top: 0;
   margin-bottom: 0;
+  color: var(--text);
 }
 h1{
   margin-bottom: 20px;
   margin-top: 20px;
+  color: var(--text);
 }
 
+.App{
+  background-color: var(--bg-color);
+  height: 100vh;
+}
 .header{
   display: flex;
  justify-content: space-around;
@@ -54,7 +68,8 @@ h1{
 }
 .card__item{
   display: flex;
-  gap:2px;
+  flex-direction: column;
+  gap:3px;
   margin-bottom: 7px;
   color:#aaac;
   padding-left:10px ;
@@ -84,13 +99,18 @@ h1{
   color: white;
 }
 
+
 .form__list{
   display: flex;
   flex-direction: column;
   gap:10px;
 }
+
 .form__item input{
   border-radius: 5px;
   height: 30px;
   padding: 10px;
+}
+.btn-dark{
+  border-radius: 50%;
 }

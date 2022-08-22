@@ -10,6 +10,7 @@ function App() {
   const [users, setUsers] = useState()
   const [updateInfo, setUpdateInfo] = useState()
   const [isOpen, setIsOpen] = useState(false)
+  const [themeMode, setThemeMode] = useState('dark')
   //console.log(updateInfo)
   
   const getAllUsers = () => {
@@ -30,10 +31,11 @@ function App() {
   
 
   return (
-    <div className="App">
+    <div className={`App ${themeMode}`}>
       <div className="header">
         <h1>Users</h1>
         <button onClick={handleOpenForm}> + Create</button>
+        <button className='btn-dark'> DarkMode </button>
       </div>
       <div className={isOpen ? 'form-container': 'form-none'}>
         <Form 

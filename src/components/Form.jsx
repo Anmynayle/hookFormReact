@@ -28,8 +28,11 @@ const Form = ({getAllUsers, updateInfo, setUpdateInfo, handleCloseForm}) => {
     .then(res => {
         console.log(res.data)
         getAllUsers()
+        alert("User Created")
     })
-    .catch(err =>console.log(err))
+    .catch(err =>{
+        console.log(err)
+        alert("User didn't created")})
      reset(defaultValue)
    }
 
@@ -45,20 +48,31 @@ const Form = ({getAllUsers, updateInfo, setUpdateInfo, handleCloseForm}) => {
     }
 
     const submit = data =>{
-     if(updateInfo){
-         updateUser(data)
-         setUpdateInfo()
-        //update 
-     }else{
-      //create   
+    if(updateInfo){
+        if (window.confirm("Do you really want to update?")) {
+            updateUser(data)
+            setUpdateInfo()
+          }else {
+            handleCloseForm()
+          }
+       //update 
+     }else{ 
      createUser(data)
      }
      reset(defaultValue)
      handleCloseForm()
+     setUpdateInfo()
  }
+
+    const closeReset = () =>{
+        handleCloseForm()
+        reset(defaultValue)
+        setUpdateInfo()
+    }
+
   return (
     <form className='form' onSubmit={handleSubmit(submit)}>
-        <div onClick={handleCloseForm} className='form-x'><i className='bx bx-window-close'></i></div>
+        <div onClick={closeReset} className='form-x'><i className='bx bx-window-close'></i></div>
         <h2 className='form__title'>{updateInfo ? 'Update Info Users' : 'Create New User'}</h2>
         <ul className='form__list'>
             <li className='form__item'>

@@ -24,9 +24,9 @@ const CardUsers = ({ user, getAllUsers, setUpdateInfo, handleOpenForm}) => {
             <h2 className='card__title'>{`${user.first_name} ${user.last_name}`}</h2>
             <hr className='card__hr' />
             <ul className='card__list'>
-                <li className='card__item'>Email:  <span className='card__span'>{user.email}</span></li>
-                <li className='card__item'>Birthday:  <span className='card__span'>{user.birthday}</span></li>
-                <li className='card__item'>Password:  <span className='card__span'>{user.password}</span></li>
+                <li className='card__item'>Email:<span className='card__span'>{user.email}</span></li>
+                <li className='card__item'>Birthday:    <span className='card__span'>{user.birthday}</span></li>
+                <li className='card__item'>Password:    <span className='card__span'>{user.password}</span></li>
             </ul>
             <div className='card__footer'>
                 <button onClick={deleteUsers} className='card__btn'><i className='bx bx-trash'></i></button>
