@@ -2,7 +2,7 @@
 :root{
   --bg-color:white;
   --text: black;
-  --bg-btn: #9AD9D9;
+  --bg-btn: rgb(180, 19, 19);
 
 }
 *{
