@@ -2,6 +2,8 @@
 :root{
   --bg-color:white;
   --text: black;
+  --bg-btn: #9AD9D9;
+
 }
 *{
   box-sizing: border-box;
@@ -13,6 +15,7 @@ body{
 .App.dark{
   --bg-color:black;
   --text: white;
+  transition: 0.3s;
 }
 ul{
   padding-left: 0;
@@ -32,6 +35,7 @@ h1{
 .App{
   background-color: var(--bg-color);
   height: 100vh;
+  transition: 0.3s;
 }
 .header{
   display: flex;
@@ -44,8 +48,8 @@ h1{
   border: none;
   border-radius: 5px;
   margin-top: 20px;
-  background-color: darkblue;
-  color: white;
+  background-color: var(--bg-btn);
+  color: var(--text);
   height: 35px;
 }
 /**Card**/
@@ -99,7 +103,6 @@ h1{
   color: white;
 }
 
-
 .form__list{
   display: flex;
   flex-direction: column;
@@ -112,5 +115,6 @@ h1{
   padding: 10px;
 }
 .btn-dark{
-  border-radius: 50%;
+  width: 50px;
+  border-radius: 60%;
 }
